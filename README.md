@@ -9,14 +9,27 @@
 
 ## Customizing
 
-1. Provide your own background image (for example, your twitter avatar), and change BACKGROUND_IMAGE to point to it
-2. Optionally, provide a different hand image. This should be at approximately 10x scale, and have a transparent background. Set HAND_IMAGE to this image.
-3. Run headpats.py and see how the alignment looks
-4. Adjust HORIZONTAL_POSITION if it needs to be farther left (smaller values) or right (bigger values) 
-5. Adjust PAT_OFFSET if it needs to be higher up (smaller) or lower (bigger)
-6. Adjust PAT_MULT if the hand needs to move farther or less far per pat. Bigger values mean more movement.
-7. Adjust TIME_DIV if the hand needs to move slower or faster. Bigger values move slower.
+headpats.py accepts the following optional arguments:
 
+```
+  -h, --help            show this help message and exit
+  --background-image BACKGROUND_IMAGE
+                        set the path for the background image to use
+  --hand-image HAND_IMAGE
+                        set the path for the hand image to use
+  -f, --fullscreen      start fullscreen
+  --pats-per-second PATS_PER_SECOND
+                        set pat frequency
+  --pat-amplitude PAT_AMPLITUDE
+                        set pat amplitude
+  -x PAT_X, --pat-x PAT_X
+                        set horizontal pat position
+  -y PAT_Y, --pat-y PAT_Y
+                        set vertical pat position
+  --framerate FRAMERATE
+                        set the frame rate limit. 0 or lower disables the
+                        frame rate limit.
+```
 ## Capturing
 
 I didn't build in any function to directly create the GIFs, I instead captured the program running using [OBS](https://obsproject.com/).
